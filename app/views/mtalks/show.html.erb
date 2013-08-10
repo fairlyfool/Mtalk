@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mtalk.name %>
+</p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @mtalk.word %>
+</p>
+
+<%= link_to 'Edit', edit_mtalk_path(@mtalk) %> |
+<%= link_to 'Back', mtalks_path %>

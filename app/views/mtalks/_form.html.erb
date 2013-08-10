@@ -1,0 +1,49 @@
+<%= form_for(@mtalk) do |f| %>
+  <% if @mtalk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mtalk.errors.count, "error") %> prohibited this mtalk from being saved:</h2>
+
+      <ul>
+      <% @mtalk.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <form data-abide>
+    <div class="row collapse">
+		<div class="small-2 columns">
+		  <%= f.label :name, class: "right inline", title: "Who are you", data: {tooltip: true} %>
+		</div>
+		<div class="small-1 columns">
+		</div>
+		<div class="small-9 columns">
+		  <%= f.text_field :name, placeholder: "Fairy" %>
+		</div>
+    </div>
+    <div class="row collapse">
+		<div class="small-2 columns">
+		  <%= f.label :word, class: "right inline", title: "Your Mtalk", data: {tooltip: true} %>
+		</div>
+		<div class="small-1 columns">
+		</div>
+		<div class="small-9 columns">
+		  <%= f.text_field :word, placeholder: "I wanna say..." %>
+		</div>
+    </div>
+    <div class="row collapse">
+		<div class="small-9 small-offset-3 columns">
+          <%= f.submit class: "button radius" %>
+        </div>
+    </div>
+  </form>
+  
+ 
+  
+<% end %>
+
+
+
+
