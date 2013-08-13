@@ -17,7 +17,7 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 
 # Use Zurb Foundation Framework
-gem 'compass-rails'
+gem 'compass-rails', '~>2.0.alpha.0'
 gem 'zurb-foundation'
 
 group :doc do
