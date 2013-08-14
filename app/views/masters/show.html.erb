@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @master.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @master.email %>
+</p>
+
+<p>
+  <strong>Slogan:</strong>
+  <%= @master.slogan %>
+</p>
+
+<%= link_to 'Edit', edit_master_path(@master) %> |
+<%= link_to 'Back', masters_path %>

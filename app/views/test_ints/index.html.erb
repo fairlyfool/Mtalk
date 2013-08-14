@@ -1,0 +1,27 @@
+<h1>Listing test_ints</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @test_ints.each do |test_int| %>
+      <tr>
+        <td><%= test_int.number %></td>
+        <td><%= link_to 'Show', test_int %></td>
+        <td><%= link_to 'Edit', edit_test_int_path(test_int) %></td>
+        <td><%= link_to 'Destroy', test_int, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test int', new_test_int_path %>

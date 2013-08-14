@@ -1,4 +1,10 @@
 Mtalkhome::Application.routes.draw do
+  resources :test_ints
+
+  resources :posts
+
+  resources :masters
+
   resources :mtalks
 
   # The priority is based upon order of creation: first created -> highest priority.

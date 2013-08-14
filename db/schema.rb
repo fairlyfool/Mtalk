@@ -11,11 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130807094818) do
+ActiveRecord::Schema.define(version: 20130814122534) do
+
+  create_table "masters", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "slogan"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "mtalks", force: true do |t|
     t.string   "name"
     t.string   "word"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.string   "content"
+    t.integer  "master_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "test_ints", force: true do |t|
+    t.integer  "number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
