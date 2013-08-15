@@ -1,6 +1,7 @@
 Mtalkhome::Application.routes.draw do
-  resources :test_ints
-
+  get "static_pages/home"
+  get "static_pages/about"
+  get "static_pages/help"
   resources :posts
 
   resources :masters
