@@ -24,3 +24,6 @@ doc/
 .DS_Store
 .idea
 .secret
+
+# Ignore .secret file for session token
+.secret
