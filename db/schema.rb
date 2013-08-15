@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130814122534) do
+ActiveRecord::Schema.define(version: 20130814121328) do
 
   create_table "masters", force: true do |t|
     t.string   "name"
@@ -32,12 +32,6 @@ ActiveRecord::Schema.define(version: 20130814122534) do
     t.string   "title"
     t.string   "content"
     t.integer  "master_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "test_ints", force: true do |t|
-    t.integer  "number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
