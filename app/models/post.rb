@@ -1,3 +1,3 @@
 class Post < ActiveRecord::Base
-  blongs_to :master
+  belongs_to :master
 end
