@@ -27,6 +27,9 @@ gem 'jbuilder', '1.0.2'
 gem 'compass-rails', '~>2.0.alpha.0'
 gem 'zurb-foundation'
 
+# Use Twitter Bootstrap Framework
+gem 'bootstrap-sass', '~>2.3.2.1'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', '0.3.20', require: false

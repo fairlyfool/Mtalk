@@ -3,7 +3,8 @@
 <!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
   <head>
   	<meta charset="utf-8" />
 
@@ -19,13 +20,22 @@
 	                                            "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	<%= csrf_meta_tags %>
-<!--	<%= stylesheet_link_tag    "application" %>
+	<%= render 'layouts/shim' %>
+    <!--	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
--->
+    -->
+	
   </head>
 
   <body>
+	<%= render 'layouts/header' %>
+	
+	<div class="container">
+	  <%= yield %>
+	  <%= render 'layouts/footer' %>
+	</div>
+	  
 	  <nav class="top-bar">
 	    <ul class="title-area">
 	      <!-- Title Area -->
@@ -261,5 +271,9 @@
 	<br>
 	<br>
     <%= javascript_include_tag "application" %>
+	
+	
+	
+
   </body>
 </html>
