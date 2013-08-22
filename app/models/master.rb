@@ -1,7 +1,9 @@
 class Master < ActiveRecord::Base
   before_save { self.email = email.downcase }
+  # or : before_save { email.downcase! }
   validates :name, presence: true, length: { maximum: 50 }
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]{2,}\z/i
+  
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
   validates_uniqueness_of :email, message: "The email address has been taken.",
                           case_sensitive: false
@@ -9,5 +11,6 @@ class Master < ActiveRecord::Base
   has_many :posts
   
   has_secure_password
+
   validates :password, length: { minimum: 8, maximum: 20 }
 end
